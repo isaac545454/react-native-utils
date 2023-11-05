@@ -18,8 +18,16 @@ export default function App() {
 			<StatusBar />
 			<Header />
 			<Input control={control} name="name" />
-			<Button title="teste" disabled={true} Icon={() => <AntDesign name="adduser" size={30} />} />
-			<Button title="teste" disabled={true} variants="secondary" />
+
+			<Button
+				title={{ children: 'aaaa', size: 'md', weight: 'bold' }}
+				disabled={true}
+				Icon={() => <AntDesign name="adduser" size={30} />}
+			/>
+			<Button title={{ children: 'aaaa', size: 'md', weight: 'bold' }} variants="warning" isLoading={true} />
+			<Button title={{ children: 'aaaa', size: 'xl' }} />
+			<Button title={{ children: 'Test', size: 'xl' }} variants="tertiary" />
+			<Button title={{ children: 'aaaa', size: 'xl', style: { color: 'black' } }} variants="success" />
 		</SafeAreaView>
 	)
 }

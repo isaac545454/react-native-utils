@@ -1,5 +1,5 @@
-import { Text, TouchableOpacity, ActivityIndicator, View } from 'react-native'
+import { ActivityIndicator } from 'react-native'
 
 export const LoadingButton = () => {
-	return <ActivityIndicator color="#FFF" />
+	return <ActivityIndicator color="#FFF" size={30} />
 }

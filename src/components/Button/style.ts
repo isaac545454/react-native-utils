@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
 	container: {
 		padding: 16,
 		alignItems: 'center',
@@ -8,10 +8,7 @@ export const style = StyleSheet.create({
 		width: '100%',
 		borderRadius: 8,
 		height: 60,
-	},
-	title: {
-		fontSize: 20,
-		fontWeight: 'bold',
+		marginVertical: 10,
 	},
 	content: {
 		flexDirection: 'row',
