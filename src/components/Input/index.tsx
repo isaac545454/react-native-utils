@@ -1,8 +1,7 @@
 import React from 'react'
 import { TextInput } from 'react-native'
-import { UseControllerProps, FieldValues, Controller } from 'react-hook-form'
-
-type InputProps<TFieldValues extends FieldValues> = React.ComponentProps<typeof TextInput> & UseControllerProps<TFieldValues>
+import { FieldValues, Controller } from 'react-hook-form'
+import { InputProps } from './type'
 
 export const Input = <TFieldValues extends FieldValues>({ name, control, ...res }: InputProps<TFieldValues>) => {
 	return (
