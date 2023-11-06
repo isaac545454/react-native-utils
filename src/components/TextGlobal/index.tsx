@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, TextProps } from 'react-native'
 
-const textSizes = {
+export const textSizes = {
 	xs: 12,
 	sm: 14,
 	md: 16,

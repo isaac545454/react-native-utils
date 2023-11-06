@@ -7,7 +7,8 @@ import { TextGlobal } from '../TextGlobal'
 import { ButtonProps } from './type'
 
 export const Button = (props: ButtonProps) => {
-	const { title, isLoading = false, Icon, disabled, variants = 'primary', style, ...res } = props
+	const { isLoading = false, disabled, variants = 'primary', children, TextSize, TextWeight, style, ...res } = props
+
 	return (
 		<TouchableOpacity
 			style={[styles.container, ButtonsVariants[variants].button, disabled && disabled && styles.disabled, style]}
@@ -17,8 +18,9 @@ export const Button = (props: ButtonProps) => {
 			{isLoading && <LoadingButton />}
 			{!isLoading && (
 				<View style={styles.content}>
-					<TextGlobal style={[ButtonsVariants[variants].title, title.style]} {...title} />
-					{Icon && <Icon />}
+					<TextGlobal style={[ButtonsVariants[variants].title]} weight={TextWeight} size={TextSize}>
+						{children}
+					</TextGlobal>
 				</View>
 			)}
 		</TouchableOpacity>

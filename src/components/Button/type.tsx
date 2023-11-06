@@ -1,10 +1,11 @@
 import { TouchableOpacityProps } from 'react-native'
 import { ButtonsVariants } from './variants'
-import { TextGlobal } from '../TextGlobal'
+import { TextGlobal, textSizes } from '../TextGlobal'
 
 export type ButtonProps = TouchableOpacityProps & {
-	title: React.ComponentProps<typeof TextGlobal>
 	isLoading?: boolean
-	Icon?: () => React.ReactNode
 	variants?: keyof typeof ButtonsVariants
+	children: React.ReactNode
+	TextSize?: keyof typeof textSizes
+	TextWeight?: 'bold'
 }
